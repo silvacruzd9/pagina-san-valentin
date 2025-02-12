@@ -144,8 +144,10 @@
                 { src: 'sonidos/cancion1.mp4', title: 'Griselda', artist: 'Tiago PZK', image: 'img/cd1.jpg' },
                 { src: 'sonidos/cancion2.mp3', title: 'Tormenta', artist: 'Gorillaz ft Bad Bunny', image: 'img/cd2.jpg' },
                 { src: 'sonidos/cancion3.mp3', title: 'Weltita', artist: 'Bad Bunny', image: 'img/cd3.jpg' },
-                { src: 'sonidos/cancion4.mp4', title: 'Te Amo', artist: 'Piso 21 ft Paulo londra', image: 'img/cd4.jpg' },
-                { src: 'sonidos/cancion5.mp4', title: 'Junto A Ti ', artist: 'Maskatesta', image: 'img/cd5.jpg' }
+                { src: 'sonidos/cancion4.mp4', title: 'M.A.I', artist: 'Milo J', image: 'img/cd4.jpg' },
+                { src: 'sonidos/cancion5.mp4', title: 'Junto A Ti ', artist: 'Maskatesta', image: 'img/cd5.jpg' },
+                { src: 'sonidos/cancion6.mp4', title: 'Ojitos Lindos ', artist: 'Bad Bunny', image: 'img/cd6.jpg' },
+                { src: 'sonidos/cancion7.mp4', title: 'Más Que Suerte', artist: 'Beatriz Luengo ft Jesus Navarro', image: 'img/cd7.jpg' }
             ];
 
             let currentSongIndex = 0;
