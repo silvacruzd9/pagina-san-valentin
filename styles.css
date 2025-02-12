@@ -1,0 +1,701 @@
+/* Estilos generales */
+body {
+    font-family: 'Dancing Script', cursive;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Portada */
+.portada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.texto-portada h1 {
+    font-size: 4rem;
+    margin: 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.texto-portada p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    animation: fadeIn 3s ease-in-out;
+}
+
+#dias {
+    font-weight: bold;
+    color: #ff6f61;
+}
+
+/* Burbujas con fotos */
+.burbujas {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.burbuja {
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    animation: float 5s infinite ease-in-out;
+}
+
+.burbuja img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.burbuja.pequeña {
+    width: 80px;
+    height: 80px;
+}
+
+.burbuja.mediana {
+    width: 120px;
+    height: 120px;
+}
+
+.burbuja.arriba {
+    align-self: flex-start;
+}
+
+/* Mini corazones decorativos */
+.mini-corazones {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    font-size: 1.5rem;
+    color: #ff6f61;
+    animation: heartbeat 1.5s infinite;
+}
+.hidden {
+    display: none;
+}
+
+/* Estilos para las fotos del álbum */
+.fotos {
+    display: none; /* Inicialmente ocultas */
+    margin-top: 10px;
+}
+
+.fotos img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Álbum de fotos */
+.album {
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.album h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.apartados {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.apartado {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.apartado:hover {
+    transform: scale(1.05);
+}
+
+.apartado .icono {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.apartado button {
+    background: #ff6f61;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.apartado button:hover {
+    background: #ff4a3d;
+}
+
+
+/* Estilos para las fotos del álbum */
+.fotos {
+    display: none; /* Inicialmente ocultas */
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    grid-template-rows: repeat(2, 1fr); /* 2 filas */
+    gap: 10px; /* Espacio entre fotos */
+}
+
+.fotos img {
+    width: 100%; /* Todas las fotos tendrán el mismo tamaño */
+    height: 150px; /* Altura fija para las fotos */
+    object-fit: cover; /* Ajustar la imagen sin distorsionar */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.fotos img:hover {
+    transform: scale(1.05); /* Efecto hover */
+}
+
+/* Estilos para el sobre */
+.sobre-contenedor {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+    text-align: center;
+    margin: 20px auto; /* Centrar el sobre */
+    width: 200px; /* Tamaño del sobre */
+}
+
+.sobre-icono {
+    font-size: 4rem; /* Ícono más grande */
+    color: #ff6f61; /* Color del sobre */
+    position: relative;
+    z-index: 1;
+}
+
+.sobre-contenedor p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #ff6f61;
+}
+
+/* Efecto de sobre abierto */
+.sobre-contenedor::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 50px;
+    background: #ff6f61;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    z-index: 0;
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+}
+
+.sobre-contenedor:hover::before {
+    opacity: 0.6; /* Efecto hover en el sobre */
+}
+
+/* Estilos para el sobre */
+.sobre-contenedor {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+    text-align: center;
+    margin: 20px auto; /* Centrar el sobre */
+    width: 200px; /* Tamaño del sobre */
+}
+
+.sobre-icono {
+    font-size: 4rem; /* Ícono más grande */
+    color: #ff6f61; /* Color del sobre */
+    position: relative;
+    z-index: 1;
+}
+
+.sobre-contenedor p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #ff6f61;
+}
+
+/* Efecto de sobre abierto */
+.sobre-contenedor::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 50px;
+    background: #ff6f61;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    z-index: 0;
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+}
+
+.sobre-contenedor:hover::before {
+    opacity: 0.6; /* Efecto hover en el sobre */
+}
+
+/* Estilos para el contenido del sobre */
+.contenido-sobre {
+    display: none; /* Inicialmente oculto */
+    margin: 20px auto; /* Centrar el contenido */
+    max-width: 800px; /* Ancho máximo del contenido */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra para efecto de elevación */
+    display: flex;
+    gap: 40px; /* Espacio más grande entre video y carta */
+    align-items: flex-start; /* Alinear elementos en la parte superior */
+}
+
+.video {
+    flex: 1;
+    max-width: 370px; /* Tamaño fijo para el video */
+}
+
+.video video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.carta {
+    flex: 1;
+    max-width: 300px; /* Mismo tamaño que el video */
+    background: linear-gradient(135deg, #fff5f5, #ffe3e3); /* Fondo degradado para la carta */
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ff6f61; /* Borde sutil */
+    box-shadow: 0 4px 10px rgba(255, 111, 97, 0.2); /* Sombra sutil */
+    margin-left: auto; /* Mover la carta más hacia la derecha */
+}
+
+.carta-contenido h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ff6f61; /* Color del título */
+}
+
+.carta-contenido p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333; /* Color del texto */
+}
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+/* Estilos para la sección del contador de novios */
+.contador-novios {
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 20px;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.texto-contador h2 {
+    font-size: 2.5rem;
+    color: #fff5f5;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#dias-novios {
+    color: #ff6f61;
+    font-weight: bold;
+    font-size: 3rem;
+}
+#horas-novios {
+    color: #ff6f61;
+    font-weight: bold;
+    font-size: 3rem;
+}
+#minutos-novios {
+    color: #ff6f61;
+    font-weight: bold;
+    font-size: 3rem;
+}
+#segundos-novios {
+    color: #ff6f61;
+    font-weight: bold;
+    font-size: 3rem;
+}
+.decoracion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    pointer-events: none;
+}
+
+.decoracion i {
+    font-size: 2rem;
+    color: rgba(255, 111, 97, 0.3);
+    animation: float 6s infinite ease-in-out;
+}
+
+.decoracion i:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.decoracion i:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.decoracion i:nth-child(3) {
+    animation-delay: 4s;
+}
+/* Estilos para el texto de la diana */
+.diana-texto {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#texto-diana {
+    font-size: 1.5rem;
+    color: #ff6f61;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#texto-diana:hover {
+    transform: scale(1.1);
+    color: #ff4a3d;
+}
+/* Estilos para la nueva sección de mensaje */
+.mensaje-section {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column; /* Esto asegura que los elementos estén uno debajo del otro */
+    align-items: center; /* Centra los elementos horizontalmente */
+}
+
+.mensaje-section h2 {
+    font-size: 2.5rem;
+    color: #ff4a3d; /* Dorado para el título */
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
+}
+
+.mensaje-section .texto-descriptivo {
+    font-size: 1.2rem;
+    color: #fff5f5; /* Blanco suave para el texto descriptivo */
+    margin-bottom: 20px;
+}
+
+#mensaje-texto {
+    width: 80%;
+    max-width: 500px;
+    height: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #ff6f61;
+    background: rgba(255, 255, 255, 0.9);
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2rem;
+    color: #333;
+    resize: none;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+#mensaje-texto:focus {
+    border-color: #ffd700; /* Cambia el borde al enfocar */
+    outline: none;
+}
+
+#enviar-whatsapp {
+    background: #25d366; /* Color de WhatsApp */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    width: 80%; /* Asegura que el botón tenga el mismo ancho que el área de texto */
+    max-width: 500px;
+}
+
+#enviar-whatsapp:hover {
+    background: #128c7e; /* Color de WhatsApp más oscuro */
+    transform: scale(1.05); /* Efecto de escala al pasar el mouse */
+}
+/* 🎵 Diseño general del reproductor */
+.reproductor-music {
+    text-align: center;
+    padding: 20px;
+    background: #1e1e1e;
+    color: #fff;
+    border-radius: 12px;
+    margin: 20px auto;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 🎧 Estilo del título */
+.reproductor-music h2 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+/* 💿 Imagen del CD */
+.album-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.album-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    transition: transform 1s linear;
+}
+
+/* Animación del CD giratorio */
+.album-img.playing {
+    animation: rotateCD 4s linear infinite;
+}
+
+@keyframes rotateCD {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* 🎼 Info de la canción */
+.song-info p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+/* 🔘 Barra de progreso */
+.progress-bar {
+    width: 90%;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+/* 🎚️ Control de volumen */
+.volume-control {
+    width: 60%;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* 🎮 Controles de reproducción */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* 🎵 Botones de control */
+.control-btn {
+    background: #ff4757;
+    border: none;
+    color: white;
+    padding: 12px;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0 2px 6px rgba(255, 71, 87, 0.6);
+}
+
+.control-btn:hover {
+    background: #ff6b81;
+    transform: scale(1.1);
+}
+
+.control-btn:active {
+    transform: scale(0.9);
+}
+/* 🎵 Diseño general del reproductor */
+.reproductor-music {
+    text-align: center;
+    padding: 20px;
+    background: #b97777;
+    color: #fff;
+    border-radius: 12px;
+    margin: 20px auto;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 🎧 Estilo del título */
+.reproductor-music h2 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+/* 💿 Imagen del CD */
+.album-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.album-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    transition: transform 1s linear;
+}
+
+/* Animación del CD giratorio */
+.album-img.playing {
+    animation: rotateCD 4s linear infinite;
+}
+
+@keyframes rotateCD {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* 🎼 Info de la canción */
+.song-info p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+/* 🔘 Barra de progreso */
+.progress-bar {
+    width: 90%;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+/* 🎚️ Control de volumen */
+.volume-control {
+    width: 60%;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* 🎮 Controles de reproducción */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* 🎵 Botones de control */
+.control-btn {
+    background: #ff4757;
+    border: none;
+    color: white;
+    padding: 12px;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0 2px 6px rgba(255, 71, 87, 0.6);
+}
+
+.control-btn:hover {
+    background: #ff6b81;
+    transform: scale(1.1);
+}
+
+.control-btn:active {
+    transform: scale(0.9);
+}
+/* Estilos para la nueva sección de sobre de invitación */
+.sobre-invitacion {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 20px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.sobre-invitacion-contenedor {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+    text-align: center;
+    margin: 20px auto;
+    width: 200px;
+}
+
+.sobre-invitacion-icono img {
+    width: 100px; /* Tamaño del sobre */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.sobre-invitacion-contenedor p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #ff6f61;
+}
+
+.sobre-invitacion-contenedor:hover img {
+    transform: scale(1.1); /* Efecto hover en el sobre */
+}
+
+/* Estilos para el contenido del sobre de invitación */
+.contenido-invitacion {
+    display: none; /* Inicialmente oculto */
+    margin: 20px auto;
+    max-width: 300px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.video-invitacion video {
+    width: 100%;
+    border-radius: 10px;
+}

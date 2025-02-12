@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz San Valentín</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Portada -->
+    <header class="portada">
+        <div class="texto-portada">
+            <h1>Daniel & Alma</h1>
+            <p id="contador-dias">Llevamos <span id="dias">0</span> días de conocernos</p>
+        </div>
+        <div class="burbujas">
+            <div class="burbuja pequeña"><img src="img/1.jpeg" alt="Foto 1" loading="lazy"></div>
+            <div class="burbuja mediana"><img src="img/3.jpeg" alt="Foto 2" loading="lazy"></div>
+            <div class="burbuja pequeña arriba"><img src="img/foto.jpeg" alt="Foto 3" loading="lazy"></div>
+        </div>
+    </header>
+
+    <!-- Mini corazones decorativos -->
+    <div class="mini-corazones">
+        <i class="fas fa-heart"></i>
+        <i class="fas fa-heart"></i>
+        <i class="fas fa-heart"></i>
+    </div>
+
+    <!-- Álbum de Fotos -->
+    <section class="album">
+        <h2>Álbum de Fotos</h2>
+        <div class="apartados">
+            <div class="apartado">
+                <div class="icono">📸</div>
+                <p>Recuerdos</p>
+                <button data-album="1">Ver Álbum</button>
+                <div class="fotos hidden" id="album1">
+                    <img src="img/recuerdo1.jpeg" alt="Recuerdo 1" loading="lazy">
+                    <img src="img/recuerdo2.jpeg" alt="Recuerdo 2" loading="lazy">
+                    <img src="img/recuerdo3.jpeg" alt="Recuerdo 3" loading="lazy">
+                    <img src="img/recuerdo4.jpeg" alt="Recuerdo 4" loading="lazy">
+                </div>
+            </div>
+
+            <div class="apartado">
+                <div class="icono">❤️</div>
+                <p>Maravillosos</p>
+                <button data-album="2">Ver Álbum</button>
+                <div class="fotos hidden" id="album2">
+                    <img src="img/maravilloso1.jpeg" alt="Maravilloso 1" loading="lazy">
+                    <img src="img/maravilloso2.jpeg" alt="Maravilloso 2" loading="lazy">
+                    <img src="img/maravilloso3.jpeg" alt="Maravilloso 3" loading="lazy">
+                    <img src="img/maravilloso4.jpeg" alt="Maravilloso 4" loading="lazy">
+                </div>
+            </div>
+
+            <div class="apartado">
+                <div class="icono">🌟</div>
+                <p>A tu lado</p>
+                <button data-album="3">Ver Álbum</button>
+                <div class="fotos hidden" id="album3">
+                    <img src="img/tulado1.jpeg" alt="A tu lado 1" loading="lazy">
+                    <img src="img/tulado2.jpeg" alt="A tu lado 2" loading="lazy">
+                    <img src="img/tulado3.jpeg" alt="A tu lado 3" loading="lazy">
+                    <img src="img/tulado4.jpeg" alt="A tu lado 4" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Sobre con video y carta -->
+<section class="sobre">
+    <div class="sobre-contenedor">
+        <div class="sobre-icono">💌</div>
+        <p>Abrir Sobre <i class="fas fa-chevron-down"></i></p>
+    </div>
+
+    <div class="contenido-sobre hidden" id="contenido-sobre">
+        <div class="video">
+            <video controls>
+                <source src="img/video.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+
+        <div class="carta">
+            <div class="carta-contenido">
+                <h3>PARA MI MONKYNOVIA</h3>
+                <p>
+                    Querida Alma,<br><br>
+                    Estos días he estado pensando mucho en que he dejado de hacer muchas cosas,
+                    como ser romántico, detallista y creo que gran parte se debe a que me he
+                    quedado sin ideas para sorprenderte, así que a mi manera nerd, friki e ingeniera
+                    de amar, te quiero decir que te amo mucho y estoy muy feliz de compartir mi vida
+                    contigo.<br>
+                    Hemos pasado algunos problemas, que en gran parte debo de admitir yo ocasiono por
+                    mi manera tan intensa de ser, lamento mucho que ya no esté siendo el lugar de
+                    paz que solía ser, es algo en lo que estoy trabajando, quiero también que sepas
+                    que quizá no te lo diga muy seguido, pero sí eres una buena novia, has mejorado en muchos aspectos y es algo que noto, lamento solo enfocarme en lo malo.
+                    <br> Recuerda siempre que estoy para ti para lo que quieras mi vida.<br><br>
+                    Atte: Daniel el chantajista :D
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Sección de contador romántico -->
+<section class="contador-novios">
+    <div class="texto-contador">
+        <h2>Nadie lo creía, ni nosotros, y ya vamos <span id="dias-novios">0</span> días, <span id="horas-novios">0</span> horas, <span id="minutos-novios">0</span> minutos y <span id="segundos-novios">0</span> segundos de novios.</h2>
+    </div>
+    <div class="decoracion">
+        <i class="fas fa-heart"></i>
+        <i class="fas fa-heart"></i>
+        <i class="fas fa-heart"></i>
+    </div>
+    <div class="diana-texto">
+        <p id="texto-diana">¡Una Diana Maestro!</p>
+    </div>
+</section>
+<!-- Nueva sección: ¿Unas palabras para mi? -->
+<div class="mensaje-section">
+    <h2>¡Unas palabras para mi?!</h2>
+    <textarea id="mensaje-texto" placeholder="Escribe algo..." maxlength="500"></textarea>
+    <button id="enviar-whatsapp">Enviar mensaje</button>
+</div>
+<!-- Sección de Reproductor de Música -->
+<div class="reproductor-music">
+    <h2>Canciones para ti</h2>
+    <div class="player">
+        <div class="album-container">
+            <img id="album-img" class="album-img" src="img/cd1.jpg" alt="Imagen del álbum">
+        </div>
+        <div class="song-info">
+            <p id="song-title">Título de la Canción</p>
+            <p id="song-artist">Artista</p>
+        </div>
+        <input type="range" id="progress-bar" class="progress-bar" value="0" max="100">
+        <div class="controls">
+            <button id="prev-btn" class="control-btn">←</button>
+            <button id="play-pause-btn" class="control-btn">Reproducir</button>
+            <button id="next-btn" class="control-btn">→</button>
+        </div>
+        <input type="range" id="volume-control" class="volume-control" value="100" max="100">
+    </div>
+</div>
+<!-- Nueva sección: Sobre con video de invitación -->
+<section class="sobre-invitacion">
+    <div class="sobre-invitacion-contenedor">
+        <div class="sobre-invitacion-icono">
+            <img src="img/sobre.png" alt="Abrir sobre de invitación">
+        </div>
+        <p>Abrir Sobre <i class="fas fa-chevron-down"></i></p>
+    </div>
+
+    <div class="contenido-invitacion hidden" id="contenido-invitacion">
+        <div class="video-invitacion">
+            <video controls>
+                <source src="img/invitacion.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+    </div>
+</section>
+<script src="script.js"></script>
+</body>
+</html> 
